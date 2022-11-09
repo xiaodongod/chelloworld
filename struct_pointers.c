@@ -20,7 +20,11 @@ typedef struct
     struct Node *next;
 }Node;
 
-typedef struct Node* LinkList;
+
+
+typedef int ElemType;
+
+typedef Node* LinkList;
 
 
 void test(int a, int* b)
@@ -33,35 +37,18 @@ void test(int a, int* b)
 
 void test2(PersonP p)
 {
-    printf("%s", p->name);
-    printf("%d", p->age);
-    PersonP a = p->next;
+    // printf("%s", p->name);
+    // printf("%d", p->age);
+    // PersonP a = p->next;
 
     printf("\n");
 }
 
 int main()
 {
-    int a=111;
-    intp b=&a;
+   LinkList l = malloc(sizeof(LinkList));
+   l->next;
 
-
-    printf("%d\n", a);
-    printf("%d\n", *b);
-
-
-    Person s;
-    s.name="张三";
-    s.age=19;
-    
-
-    PersonP pp=&s;
-
-    test2(pp);
-
-    s.age=22;
-
-    test2(pp);
 
 
 }
