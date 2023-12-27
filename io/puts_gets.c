@@ -1,8 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
 int main()
 {
-    printf("hello world\n");
+
+    char str[32];
+    gets(str);
+    puts(str);
+   
+
     exit(0);
 }
