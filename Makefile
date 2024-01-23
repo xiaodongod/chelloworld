@@ -3,7 +3,8 @@ CC=gcc
 SRC_DIR=.
 BIN_DIR=./bin
 
-SRCS=$(wildcard $(SRC_DIR)/*.c)
+# SRCS=$(wildcard $(SRC_DIR)/*.c)
+SRCS=$(shell find $(SRC_DIR) -name '*.c')
 BINS=$(patsubst $(SRC_DIR)/%.c,$(BIN_DIR)/%,$(SRCS))
 
 all: $(BINS)
