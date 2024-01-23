@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 
 
 
@@ -46,10 +48,10 @@ void test2(PersonP p)
 
 int main()
 {
-   LinkList l = malloc(sizeof(LinkList));
+   LinkList l = (LinkList)malloc(sizeof(LinkList));
    l->next;
 
-
+    return 0;
 
 }
 

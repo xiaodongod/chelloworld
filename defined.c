@@ -29,6 +29,7 @@ int main()
     exit(0);
 }
 
+#if 0
 /**
  * gcc -E defined.c
  * 
@@ -46,3 +47,4 @@ int main()
     }
  * 
 */
+#endif
