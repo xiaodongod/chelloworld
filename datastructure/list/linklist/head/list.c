@@ -49,11 +49,46 @@ void show(linknode *list) {
     printf("\n");
 }
 
-int append(linknode* list, datatype *data ){}
+int list_order_insert(linknode *list, datatype *data) {
+    linknode *node = list;
 
-int delete_at(linknode *list, int i, datatype *data){}
+    while (node->next != NULL && node->next->data < *data)
+    {
+        node = node->next;
+    }
 
-int list_delete(linknode *list, datatype * data){}
+    linknode *newnode = malloc(sizeof(newnode));
+    newnode->data=*data;
+    linknode *next = node->next;
+    node->next = newnode;
+    newnode->next=next;
+    
+    return 0;
+}
+
+int append(linknode* list, datatype *data ){
+    return 0;
+}
+
+int delete_at(linknode *list, int i, datatype *data){
+    return 0;
+}
+
+int list_delete(linknode *list, datatype *data){
+    linknode* node = list;
+    while (node->next != NULL && node->next->data != *data)
+    {
+        node=node->next;
+    }
+    if (node)
+    {
+        linknode* nextnext = node->next->next;
+        free(node->next);
+        node->next=NULL;
+        node->next = nextnext;
+    }
+    return 0;
+}
 
 int isempty(linknode* list) {
     return list->next == NULL?1:0;

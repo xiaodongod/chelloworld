@@ -26,6 +26,7 @@ void list_destroy(linknode *);
 
 void show(linknode *);
 
+int list_order_insert(linknode *, datatype *) ;
 
 
 #endif 

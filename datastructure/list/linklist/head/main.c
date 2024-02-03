@@ -6,13 +6,18 @@
 
 int main() {
     linknode *list = list_create();
-    datatype arr[] = {12, 23, 34, 45};
+    datatype arr[] = {98, 12, 23, 34, 45};
 
     for (int i = 0; i < sizeof(arr)/sizeof(*arr); i++)
     {
-        list_insert_at(list, 0, &arr[i]);
-    }
+        list_order_insert(list, &arr[i]);
+    } 
     
+    show(list);
+
+    int v = 34;
+    list_delete(list, &v);
+
     show(list);
 
     list_destroy(list);
